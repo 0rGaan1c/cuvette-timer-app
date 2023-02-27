@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: yellowgreen;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 60px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: yellow;
+  width: 40%;
+  height: 50vh;
+  border-radius: 12px;
+}
+
+.input_container {
+  text-align: center;
+  margin: 100px 0 60px 0;
+}
+
+.input_container > input {
+  outline: none;
+  border: 2px solid black;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+}
+
+.btn_container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn_container > button {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffcccb;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 999;
+  height: 50vh;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  color: red;
+  position: relative;
+}
+
+.modal-content > button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
