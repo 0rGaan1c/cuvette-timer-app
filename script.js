@@ -52,6 +52,7 @@ const showDialogBox = () => {
   modal.classList.remove("hide");
 };
 
+const audio = new Audio("timeout.mp3");
 const startTimer = () => {
   if (!isTimerStarted) {
     isTimerStarted = true;
@@ -62,7 +63,6 @@ const startTimer = () => {
 
   timer = setInterval(() => {
     if (totalSeconds === 0) {
-      const audio = new Audio("timeout.mp3");
       audio.play();
       showDialogBox();
       resetTimer();
@@ -116,4 +116,6 @@ pauseBtn.addEventListener("click", () => {
 dismissBtn.addEventListener("click", () => {
   const modal = getElement("modal");
   modal.classList.add("hide");
+  audio.pause();
+  audio.currentTime = 0;
 });
